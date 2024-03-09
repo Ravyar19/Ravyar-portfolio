@@ -1,8 +1,12 @@
 function App() {
   return (
-    <>
-      <h1>Hello World</h1>
-    </>
+    <div>
+      <section c>Hero</section>
+      <section>Parrallax</section>
+      <section>Services</section>
+      <section>Portfolio</section>
+      <section>Contact</section>
+    </div>
   );
 }
 
