@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .social-icons {
+    height: 18px;
+    height: 18px;
+  }
+}
+
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;

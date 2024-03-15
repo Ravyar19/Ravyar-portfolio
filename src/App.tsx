@@ -1,11 +1,15 @@
+import Navbar from './components/navbar/Navbar';
+
 function App() {
   return (
     <div>
-      <section c>Hero</section>
-      <section>Parrallax</section>
+      <section id='Homepage'>
+        <Navbar />
+      </section>
+      <section id='Services'>Parrallax</section>
       <section>Services</section>
-      <section>Portfolio</section>
-      <section>Contact</section>
+      <section id='Portfolio'>Portfolio</section>
+      <section id='Cortfolio'>Contact</section>
     </div>
   );
 }
