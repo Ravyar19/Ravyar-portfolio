@@ -30,3 +30,7 @@ body {
   background-color: #0c0c1d;
   color: lightgray;
 }
+
+.hero {
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+}

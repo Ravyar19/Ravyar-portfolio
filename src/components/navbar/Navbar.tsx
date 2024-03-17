@@ -24,7 +24,7 @@ const Navbar = () => {
           transition={{
             duration: 0.5,
           }}
-          className=' font-bold  '
+          className=' font-bold text-2xl  '
         >
           Ravyar Aram
         </motion.span>
