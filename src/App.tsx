@@ -1,6 +1,7 @@
 import Navbar from './components/navbar/Navbar';
 import Hero from './components/navbar/hero/Hero';
 import Parallax from './components/navbar/parallax/Parallax';
+import Services from './components/navbar/services/Services';
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
       </section>
       <section id='Services'>
         <Parallax type='services' />
+      </section>
+      <section>
+        <Services />
       </section>
       <section>
         <Parallax type='portfolio' />

@@ -1,6 +1,16 @@
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
 
 const Parallax = ({ type }) => {
+  const ref = useRef<HTMLElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start start', 'end start'],
+  });
+
+  const yText = useTransform(scrollYProgress, [0, 1], ['0%', '500%']);
+  const yBg = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
   return (
     <div
       style={{
@@ -9,14 +19,25 @@ const Parallax = ({ type }) => {
             ? 'linear-gradient(180deg, #111132, #0c0c1d)'
             : 'linear-gradient(180deg, #111132, #505064)',
       }}
-      className='w-full h-full relative flex items-center justify-center'
+      ref={ref}
+      className='w-full h-full relative flex items-center justify-center overflow-hidden'
     >
-      <motion.h1 className='text-[100px]'>
+      <motion.h1 style={{ y: yText }} className='text-[100px]'>
         {type === 'services' ? 'What I Do?' : 'What i did'}
       </motion.h1>
       <motion.div className='mountains'></motion.div>
-      <motion.div className='planets'></motion.div>
-      <motion.div className='stars'></motion.div>
+      <motion.div
+        style={{
+          y: yBg,
+          backgroundImage: `url(${
+            type === 'services'
+              ? '/src/assets/planets.png'
+              : '/src/assets/sun.png'
+          })`,
+        }}
+        className='planets'
+      ></motion.div>
+      <motion.div style={{ y: yBg }} className='stars'></motion.div>
     </div>
   );
 };
