@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import HeroImg from '../../../assets/hero.svg';
-import Scroll from '../../../assets/scroll.png';
+import HeroImg from '../../assets/hero.svg';
+import Scroll from '../../assets/scroll.png';
 
 const textVariants = {
   initial: {
@@ -60,7 +60,7 @@ const Hero = () => {
           >
             Web developer and Jira Administator
           </motion.h1>
-          <motion.div variants={textVariants} className='flex gap-10'>
+          <motion.div variants={textVariants} className='flex gap-10 '>
             <motion.button
               variants={textVariants}
               className='p-[15px] border-[1px] rounded-xl'

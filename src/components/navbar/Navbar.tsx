@@ -1,9 +1,9 @@
-import facebook from './../../assets/facebook.png';
-import instagram from './../../assets/instagram.png';
-import youtube from './../../assets/youtube.png';
-import dribbble from './../../assets/dribbble.png';
+import facebook from '../../assets/facebook.png';
+import instagram from '../../assets/instagram.png';
+import youtube from '../../assets/youtube.png';
+import dribbble from '../../assets/dribbble.png';
 import { motion } from 'framer-motion';
-import Sidebar from './sidebar/Sidebar';
+import Sidebar from '../sidebar/Sidebar';
 
 const Navbar = () => {
   return (
