@@ -60,7 +60,7 @@ const Hero = () => {
           >
             Web developer and Jira Administator
           </motion.h1>
-          <motion.div variants={textVariants} className='flex gap-10 '>
+          <motion.div variants={textVariants} className='flex gap-10 z-[999]'>
             <motion.button
               variants={textVariants}
               className='p-[15px] border-[1px] rounded-xl'
